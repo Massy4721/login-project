@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Connexion</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <header class="header">
+        <div class="logo" aria-hidden="true">🔒</div>
+        <div>
+          <h1>Connexion</h1>
+          <p>Accédez à votre espace</p>
+        </div>
+      </header>
+
+      <form class="form" onsubmit="event.preventDefault(); login();">
+        <div class="field">
+          <label for="username">Identifiant</label>
+          <input id="username" type="text" placeholder="ex: admin" autocomplete="username" />
+        </div>
+
+        <div class="field">
+          <label for="password">Mot de passe</label>
+          <input id="password" type="password" placeholder="••••••••" autocomplete="current-password" />
+        </div>
+
+        <div id="message" class="message" role="status" aria-live="polite"></div>
+
+        <div class="buttons">
+          <button class="btn btn-ghost" type="button" onclick="resetForm()">Reset</button>
+          <button class="btn btn-primary" type="submit">Valider</button>
+          <button class="btn btn-outline" type="button" onclick="goRegister()">Ajout compte</button>
+        </div>
+
+        <footer class="hint">
+          Compte par défaut : <strong>admin / 1234</strong>
+        </footer>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

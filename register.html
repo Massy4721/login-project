@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Créer un compte</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <header class="header">
+        <div class="logo" aria-hidden="true">➕</div>
+        <div>
+          <h1>Créer un compte</h1>
+          <p>Ajoutez un nouvel utilisateur</p>
+        </div>
+      </header>
+
+      <form class="form" onsubmit="event.preventDefault(); register();">
+        <div class="field">
+          <label for="newUsername">Nouvel identifiant</label>
+          <input id="newUsername" type="text" placeholder="ex: user1" autocomplete="username" />
+        </div>
+
+        <div class="field">
+          <label for="newPassword">Nouveau mot de passe</label>
+          <input id="newPassword" type="password" placeholder="••••••••" autocomplete="new-password" />
+        </div>
+
+        <div class="field">
+          <label for="confirmPassword">Confirmer le mot de passe</label>
+          <input id="confirmPassword" type="password" placeholder="••••••••" autocomplete="new-password" />
+        </div>
+
+        <div id="message" class="message" role="status" aria-live="polite"></div>
+
+        <div class="buttons">
+          <button class="btn btn-ghost" type="button" onclick="goLogin()">Retour</button>
+          <button class="btn btn-primary" type="submit">Créer</button>
+          <button class="btn btn-outline" type="button" onclick="resetRegister()">Reset</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
